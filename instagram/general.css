@@ -34,7 +34,6 @@ body aside {
 */
 
 /* HEADER */
-
 header {
 
     margin-top: 20px;
@@ -251,11 +250,50 @@ aside {
 }
 */
 
+body>header {
+    display: none;
+}
+
+body>header img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 600px){
+    aside {
+        display: none;
+    }
+    body > header {
+        display: block;
+    }
+}
+
 /*MEDIA*/
 @media only screen and (max-width: 600px){
+    aside {
+        display: none;
+    }
+    body > header {
+        display: block;
+    }
     body {
 
-        background-color: grey;
-
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    header {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    main {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    body > header #menu-mobile {
+        display: none;
+    }
+    body > header #barra button:hover {
+        display: block;
     }
 }
